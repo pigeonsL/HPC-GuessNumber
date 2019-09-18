@@ -1,0 +1,15 @@
+**/CMakeCache.txt
+**/CMakeFiles
+**/cmake_install.cmake
+**/MakeFile
+**/Testing
+**/CTestTestfile.cmake
+**/build
+**/.DS_Store
+**/.history
+**/*.a
+**/*.lib
+**/*.exe
+**/.*.swp
+src/main
+tests/testHello
