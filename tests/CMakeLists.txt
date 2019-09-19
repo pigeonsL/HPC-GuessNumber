@@ -1,7 +1,7 @@
 ADD_SUBDIRECTORY(googletest EXCLUDE_FROM_ALL)
 AUX_SOURCE_DIRECTORY(. SOURCE)
-ADD_EXECUTABLE(testHello ${SOURCE})
-TARGET_LINK_LIBRARIES(testHello hello gtest_main)
+ADD_EXECUTABLE(helloTest ${SOURCE})
+TARGET_LINK_LIBRARIES(helloTest hello gtest_main)
 
-ADD_TEST(NAME testHello COMMAND testHello)
+ADD_TEST(NAME helloTest COMMAND helloTest)
 
