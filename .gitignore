@@ -11,7 +11,10 @@
 **/*.lib
 **/*.exe
 **/.*.swp
-**/.vscode
+**/.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
 src/main
 tests/testHello
 tags
