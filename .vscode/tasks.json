@@ -39,6 +39,12 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "build and run",
+            "type": "shell",
+            "command": "${workspaceRoot}/script/build_and_run.bat",
+            "problemMatcher": []
         }
     ]
 }
