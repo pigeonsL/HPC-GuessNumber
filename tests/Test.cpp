@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "hello.h"
+#include "Hello.h"
 
 TEST(lib, Case1)
 {
