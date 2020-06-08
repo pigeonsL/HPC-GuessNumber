@@ -27,6 +27,36 @@ TEST(Guess, should_output_answer_code_2A4B_with_valid_input)
     std::string expect = "2A4B";
     EXPECT_THAT(result, Eq(expect));
 }
+TEST(Guess, should_output_answer_code_1A0B_with_valid_input)
+{
+    GuessNumberGame game;
+    game.answer_ = {1, 2, 3, 4};
+
+    auto result = game.Guess({1, 5, 6, 7});
+
+    std::string expect = "1A0B";
+    EXPECT_THAT(result, Eq(expect));
+}
+TEST(Guess, should_output_answer_code_0A2B_with_valid_input)
+{
+    GuessNumberGame game;
+    game.answer_ = {1, 2, 3, 4};
+
+    auto result = game.Guess({2, 4, 7, 8});
+
+    std::string expect = "0A2B";
+    EXPECT_THAT(result, Eq(expect));
+}
+TEST(Guess, should_output_answer_code_1A2B_with_valid_input)
+{
+    GuessNumberGame game;
+    game.answer_ = {1, 2, 3, 4};
+
+    auto result = game.Guess({0, 3, 2, 4});
+
+    std::string expect = "1A2B";
+    EXPECT_THAT(result, Eq(expect));
+}
 TEST(Guess, should_output_wrong_input_with_invalid_input)
 {
     GuessNumberGame game;

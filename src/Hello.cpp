@@ -9,7 +9,6 @@ std::string GuessNumberGame::Guess(const std::array<int, 4>& digits)
             if(digits[i] == this->answer_[j]){
                 if(i == j){
                     numberA++;
-                    numberB++;
                 }else{
                     numberB++;
                 }
