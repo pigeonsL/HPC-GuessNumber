@@ -57,11 +57,34 @@ TEST(Guess, should_output_answer_code_1A2B_with_valid_input)
     std::string expect = "1A2B";
     EXPECT_THAT(result, Eq(expect));
 }
-TEST(Guess, should_output_wrong_input_with_invalid_input)
+TEST(IsValidInput, should_output_wrong_input_with_invalid_repeat_number)
 {
     GuessNumberGame game;
     game.answer_ = {1, 2, 3, 4};
     std::string input = "1 1 2 3";
+
+    auto result = game.IsValidInput(input);
+
+    bool expect = false;
+    EXPECT_THAT(result, Eq(expect));
+}
+TEST(IsValidInput, wrong_input_with_invalid_lack_of_number)
+{
+    GuessNumberGame game;
+    game.answer_ = {1, 2, 3, 4};
+    std::string input = "1 2";
+
+    auto result = game.IsValidInput(input);
+
+    bool expect = false;
+    EXPECT_THAT(result, Eq(expect));
+}
+TEST(IsValidInput, wrong_input_with_invalid_number_out_of_range)
+{
+    GuessNumberGame game;
+    game.answer_ = {1, 2, 3, 4};
+    std::string input = "11 2";
+
     auto result = game.IsValidInput(input);
 
     bool expect = false;
