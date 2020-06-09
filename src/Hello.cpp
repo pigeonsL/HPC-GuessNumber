@@ -131,7 +131,9 @@ std::string GuessNumberGame::Instruction(const std::array<int, 4>& digits){
 }
 void GuessNumberGame::PlayGame() {
     std::string userInput;
-    while(getline(std::cin, userInput)){
+    size_t numberInput = 6;
+    while(numberInput>0){
+        getline(std::cin, userInput);
         std::string output = "";
         if(this->IsValidInput(userInput)){
             output += this->Guess(this->guess_);
@@ -145,6 +147,6 @@ void GuessNumberGame::PlayGame() {
         else{
             std::cout<<"Wrong Input, Input again"<<std::endl;
         }
+        numberInput--;
     }
-
 }
